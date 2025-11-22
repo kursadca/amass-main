@@ -1,2 +1,43 @@
-# amass-main
-🛠️ AllHackingTools - OWASP Amass'ı SunarTanımBu havuz , öncelikli olarak OWASP Amass Projesi kullanılarak, harici varlık keşfi ve ağ haritalamasına özel bir odaklanma ile siber güvenlik ve sızma testi için özenle seçilmiş bir araç koleksiyonu sağlamaya adanmıştır .Amass, hedef kuruluşa ait alt alan adlarını, IP adreslerini ve diğer ilgili varlıkları bulmak için çeşitli teknikler (DNS, veri toplama ve aktif keşif gibi) kullanan açık kaynaklı bir araçtır. Bu, onu etkili saldırı yüzeyi yönetimi için vazgeçilmez bir araç haline getirir.⚠️ Yasal Uyarı: Bu araçlar yalnızca yasal ve etik amaçlarla tasarlanmıştır . Bu araçların açık izin olmaksızın veya kötü niyetli amaçlarla sistemlere karşı kullanılması kesinlikle yasaktır ve yerel yasaları ihlal edebilir. Tüm sorumluluk kullanıcıya aittir.🌟 Temel Odak: OWASP ToplamaAmass, dağınık iç ve dış verileri hedefin açıkta kalan varlıklarının tam bir resmine dönüştürür.Toplama Alt KomutuAmaçamass intelNumaralandırma için hedefleri (etki alanları, IP'ler, ASN'ler) keşfedin.amass enumKapsamlı sayım ve ağ haritalaması yapın.amass vizSayım sonuçlarını grafikler kullanarak görselleştirin.amass trackZaman içinde sayımlar arasındaki farklılıkları takip edin.amass dbAmass grafik veritabanını düzenleyin.🚀 BaşlarkenÖn koşullarAmass ve diğer araçları kullanmak için Linux tabanlı bir işletim sistemi (örneğin Kali Linux ) ve Go dili (Amass kurulumu için) önerilir.Kurulum (Biriktirme)Amass sisteminizde önceden kurulu değilse:Go'nun yüklü olduğundan emin olun .Go aracını kullanarak Amass'ı yükleyin:Bashgo install -v github.com/owasp-amass/amass/v4/...@master (Resmiye bakınOWASP GitHub'ı Topla(En son kurulum yöntemleri için.)Temel Kullanım ÖrneğiHedef etki alanında temel bir alt etki alanı numaralandırması gerçekleştirmek için:Bashamass enum -d target.com 📂 Depo Yapısı (Örnek)Amass ana özellik olsa da, bu depo diğer destekleyici araçları da içerir:AllHackingTools/ ├── amass-reports/          # Folder to store Amass output and visualization files ├── supporting-tools/       # Tools for post-enumeration analysis or specialized tasks │   ├── port-scanners/ │   └── data-parsers/ ├── wordlists/              # Custom wordlists for Amass brute-forcing └── README.md 🤝 Katkıda BulunmakKatkılarınız memnuniyetle karşılanır! Amass'ı tamamlayan bir senaryonuz veya keşif için kullanışlı bir yardımcı programınız varsa, lütfen katkıda bulunmaktan çekinmeyin.Depoyu çatallandırın .Bir Dal Oluşturun .Bir Çekme İsteği açın .📧 İletişim ve BağlantıGitHub Kullanıcı Adı: kursadcaInstagram: @kursadca
+## 🛠️ amass-main - Featuring OWASP Amass
+
+### Description
+
+This repository offers a curated collection of tools for cybersecurity and penetration testing, with a **primary focus on external asset discovery and network mapping using the OWASP Amass Project.** Amass is an open-source tool that uses techniques like DNS, scraping, and active reconnaissance to find subdomains, IPs, and related assets. This makes it a critical tool for effective attack surface management.
+
+⚠️ **Legal Disclaimer:** These tools are strictly intended for **legal and ethical purposes only**. The use of these tools against systems without explicit permission or for malicious intent is strictly prohibited and may violate local laws. All responsibility lies with the user.
+
+### 🌟 Core Focus: OWASP Amass
+
+Amass transforms scattered internal and external data into a complete picture of a target's exposed assets, aiding in deep reconnaissance.
+
+| Amass Subcommand | Purpose |
+| :--- | :--- |
+| `amass intel` | Discover targets (domains, IPs, ASNs) for enumeration. |
+| `amass enum` | Perform comprehensive enumeration and network mapping. |
+| `amass viz` | Visualize enumeration results using graphs. |
+| `amass track` | Track differences between enumerations over time. |
+| `amass db` | Manipulate the Amass graph database. |
+
+### 🚀 Getting Started
+
+#### Prerequisites
+
+To use Amass and other tools, a Linux-based OS (e.g., **Kali Linux**) and the **Go language** (for Amass installation) are highly recommended.
+
+#### Installation (Amass)
+
+If Amass is not pre-installed on your system, follow these steps:
+
+1.  Ensure **Go** is installed.
+2.  Install Amass using the Go tool:
+    ```bash
+    go install -v [github.com/owasp-amass/amass/v4/...@master](https://github.com/owasp-amass/amass/v4/...@master)
+    ```
+    *(Refer to the official OWASP Amass documentation for up-to-date installation methods.)*
+
+#### Basic Usage Example
+
+To perform a basic subdomain enumeration on a target domain:
+
+```bash
+amass enum -d example.com
