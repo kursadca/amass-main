@@ -41,3 +41,23 @@ To perform a basic subdomain enumeration on a target domain:
 
 ```bash
 amass enum -d example.com
+
+📂 Depo Yapısı (Örnek)
+amass-main/
+├── amass-reports/          # Folder to store Amass output and visualization files
+├── supporting-tools/       # Complementary tools for post-enumeration analysis or specialized tasks
+├── wordlists/              # Custom wordlists for Amass brute-forcing
+└── README.md
+🤝 Katkıda Bulunmak
+Katkılarınız memnuniyetle karşılanır! Amass'ı tamamlayan bir senaryonuz veya keşif için kullanışlı bir yardımcı programınız varsa, lütfen katkıda bulunmaktan çekinmeyin.
+
+Depoyu çatallandırın .
+
+Bir Dal Oluşturun .
+
+Bir Çekme İsteği açın .
+
+📧 İletişim ve Bağlantı
+GitHub Kullanıcı Adı: kursadca
+
+Instagram: @kursadca
